@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--  <bean id="emp" class="com.capgemini.springcore.beans.EmployeeBean" scope="prototype">
+   		<property name="empId" value="101"></property>
+   		<property name="name" value="Bhaskar"></property>
+   		<property name="age" value="25"></property>
+   		<property name="departmentBean" ref="dept"></property>
+   </bean>
+   <bean id="dept" class="com.capgemini.springcore.beans.DepartmentBean">
+   		<property name="deptId" value="901"></property>
+   		<property name="deptName" value="Development"></property>
+   </bean>
+ -->
+ 
+ <bean id="emp" class="com.capgemini.springcore.beans.EmployeeBean" autowire="byName"> 
+   		<property name="empId" value="103"></property>
+   		<property name="name" value="Bhaskar"></property>
+   		<property name="age" value="25"></property>
+   </bean>
+   
+   <bean id="departmentBean" class="com.capgemini.springcore.beans.DepartmentBean">
+   		<property name="deptId" value="903"></property>
+   		<property name="deptName" value="Development"></property>
+   </bean>
+</beans>
